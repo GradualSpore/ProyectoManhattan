@@ -61,7 +61,7 @@ namespace FashionApp.Views
 
         protected override void OnDisappearing()
         {
-            timer?.Dispose();
+            timer.Dispose();
             base.OnDisappearing();
         }
 
