@@ -23,6 +23,7 @@ namespace FashionApp.Views
                 {
                     if (stchRemember.IsToggled == true)
                     {
+                        Preferences.Set("Login", "true");
                         Preferences.Set("Correo", etyCorreo.Text);
                         Preferences.Set("Contraseña", etyContra.Text);
                     }
