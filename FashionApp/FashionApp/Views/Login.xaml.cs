@@ -41,7 +41,7 @@ namespace FashionApp.Views
         }
         protected override void OnAppearing()
         {
-            if ((Preferences.Get("Correo", true) == true))
+            if ((Preferences.ContainsKey("Login", "true") == true))
             {
                 etyCorreo.Text = Preferences.Get("Correo", "");
                 etyContra.Text = Preferences.Get("Contraseña", "");

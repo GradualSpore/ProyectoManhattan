@@ -25,6 +25,7 @@ namespace FashionApp.Views
             Preferences.Remove("Login");
             Preferences.Remove("Correo");
             Preferences.Remove("Contraseña");
+            (Application.Current).MainPage = new Login();
         }
     }
 }
