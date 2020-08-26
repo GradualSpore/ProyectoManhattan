@@ -36,6 +36,9 @@
         <Tab Title="Restaurantes" Icon="collections.png">
             <ShellContent ContentTemplate="{DataTemplate views:CollectionsPage}"/>
         </Tab>
+        <Tab Title="Carro" Icon="shop.png">
+            <ShellContent ContentTemplate="{DataTemplate views:Carrito}"/>
+        </Tab>
         <Tab Title="Perfil" Icon="user.png">
             <ShellContent ContentTemplate="{DataTemplate views:ProfilePage}"/>
         </Tab>

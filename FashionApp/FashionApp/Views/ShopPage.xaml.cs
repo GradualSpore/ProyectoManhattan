@@ -36,10 +36,8 @@ namespace FashionApp.Views
         {
             var trendList = new List<Product>();
             trendList.Add(new Product { Image = "coats.png", Name = "Comida X", Price = "$123.50" });
-            
             trendList.Add(new Product { Image = "coats.png", Name = "Comida X", Price = "$123.50" });
             trendList.Add(new Product { Image = "coats2.png", Name = "Comida Y", Price = "200" });
-
 
             return trendList;
         }

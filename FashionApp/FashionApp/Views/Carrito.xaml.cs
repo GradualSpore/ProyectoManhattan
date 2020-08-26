@@ -10,13 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace FashionApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ProfilePage : ContentPage
+    public partial class Carrito : ContentPage
     {
-        public ProfilePage()
+        public Carrito()
         {
             InitializeComponent();
         }
-
-        
     }
 }

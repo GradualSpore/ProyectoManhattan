@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FashionApp.Views;
+using System;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -9,15 +11,19 @@ namespace FashionApp
         public App()
         {
             InitializeComponent();
-
-            MainPage = new AppShell();
+            if (Preferences.ContainsKey("Login")) {
+                MainPage = new AppShell();
+            }
+            else
+            {
+                MainPage = new Login();
+            }
+                
         }
-
         protected override void OnStart()
         {
-            // Handle when your app starts
+            
         }
-
         protected override void OnSleep()
         {
             // Handle when your app sleeps
