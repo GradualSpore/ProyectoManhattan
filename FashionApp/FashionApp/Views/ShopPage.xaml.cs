@@ -50,17 +50,17 @@ namespace FashionApp.Views
             return colList;
         }
 
+        protected override void OnDisappearing()
+        {
+            timer.Dispose();
+            base.OnDisappearing();
+        }
+
         protected override void OnAppearing()
         {
             timer = new Timer(TimeSpan.FromSeconds(5).TotalMilliseconds) { AutoReset = true, Enabled = true };
             timer.Elapsed += Timer_Elapsed;
             base.OnAppearing();
-        }
-
-        protected override void OnDisappearing()
-        {
-            timer.Dispose();
-            base.OnDisappearing();
         }
 
         private void Timer_Elapsed(object sender, ElapsedEventArgs e)

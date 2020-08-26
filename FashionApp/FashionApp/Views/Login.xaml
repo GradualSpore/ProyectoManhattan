@@ -19,6 +19,10 @@
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand"
                 x:Name="etyContra"/>
+            <StackLayout Orientation="Horizontal" Padding="0,20,0,40">
+                <Label Text="Recordar credenciales" />
+                <Switch x:Name="stchRemember" ThumbColor="HotPink" OnColor="Pink"/>
+            </StackLayout>
             <Button Text="Iniciar sesion"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand"
