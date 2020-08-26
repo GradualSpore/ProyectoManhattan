@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Essentials;
 
 namespace FashionApp.Views
 {
@@ -18,11 +19,13 @@ namespace FashionApp.Views
 
             btnIniciarSesion.Clicked += (sender, e) =>
             {
-                string correo = etyCorreo.Text;
-                string contra = etyContra.Text;
-                if (correo=="ja_phi" && contra=="991004ajge")
+                if ("root"==etyCorreo.Text && "12345"==etyContra.Text)
                 {
-                    
+                    if (stchRemember.IsToggled == true)
+                    {
+                        Preferences.Set("Correo", etyCorreo.Text);
+                        Preferences.Set("Contraseña", etyContra.Text);
+                    }
                     (Application.Current).MainPage = new AppShell();
                 }
                 else
@@ -30,10 +33,20 @@ namespace FashionApp.Views
                     lblAdvertencia.Text = "Usuario o contraseña incorrectos";
                 }
             };
-            btnCrearCuenta.Clicked += (sender, e) =>
+            btnCrearCuenta.Clicked += async(sender, e) =>
             {
-
+                await Navigation.PushAsync(new Registro());
             };
         }
+        protected override void OnAppearing()
+        {
+            if ((Preferences.Get("Correo", true) == true))
+            {
+                etyCorreo.Text = Preferences.Get("Correo", "");
+                etyContra.Text = Preferences.Get("Contraseña", "");
+                stchRemember.IsToggled = true;
+            }
+        }
+
     }
 }

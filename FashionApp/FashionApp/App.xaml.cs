@@ -11,14 +11,13 @@ namespace FashionApp
         public App()
         {
             InitializeComponent();
+
             if (Preferences.ContainsKey("Login")) {
                 MainPage = new AppShell();
             }
-            else
-            {
-                MainPage = new Login();
+            else{
+                MainPage = new NavigationPage(new Login());
             }
-                
         }
         protected override void OnStart()
         {
