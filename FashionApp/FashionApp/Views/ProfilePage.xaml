@@ -46,6 +46,10 @@
                             <Image Source="Binoculars.png" WidthRequest="45" HeightRequest="45" HorizontalOptions="Center"/>
                             <Label Text="Sightseeing" TextColor="#2C3E50" FontSize="12" HorizontalOptions="Center"/>
                         </StackLayout>
+                        <Button Text="Log out"
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="CenterAndExpand"
+                            x:Name="btnLogOut"/>
                     </Grid>
                 </Grid>
             </Frame>
