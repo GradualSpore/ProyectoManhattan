@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using MySqlConnector;
 
@@ -7,12 +8,12 @@ namespace FashionApp
 {
     class Connect
     {
-        string usr;
+        string correo;
         string pass;
 
         public Connect(string user, string password)
         {
-            usr = user;
+            correo = user;
             pass = password;
         }
 
@@ -22,9 +23,9 @@ namespace FashionApp
         {
             builder.Server = "201.146.25.42";
             builder.Port = 3306;
-            builder.Database = "basepruebaapp";
-            builder.UserID = usr;
-            builder.Password = pass;
+            builder.Database = "smartdelivery_smart";
+            builder.UserID = "Prueba";
+            builder.Password = "GcMSieJWeC8fZJmQ";
 
             try
             {
@@ -39,6 +40,12 @@ namespace FashionApp
                 return false;
             }
         }
+
+        public bool Login()
+        {
+            return false;
+        }
+
 
     }
 }

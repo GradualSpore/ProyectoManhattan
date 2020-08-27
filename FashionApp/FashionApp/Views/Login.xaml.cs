@@ -19,6 +19,11 @@ namespace FashionApp.Views
 
             btnIniciarSesion.Clicked += (sender, e) =>
             {
+                Connect login = new Connect(etyCorreo.Text, etyContra.Text);
+                string error;
+                if(!login.TryConnection(out error)){
+
+                }
                 if ("root"==etyCorreo.Text && "12345"==etyContra.Text)
                 {
                     if (stchRemember.IsToggled == true)
