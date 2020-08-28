@@ -16,14 +16,12 @@
                                 Source="{Binding Image}"
                                 Aspect="Fill"
                                 HorizontalOptions="FillAndExpand"
-                                VerticalOptions="FillAndExpand"
-                                Clicked="OnBotonClickeado"/>
-                            <ImageButton
+                                VerticalOptions="FillAndExpand"/>
+                            <Image
                                 Source="overlayCol.png"
                                 Aspect="Fill"
                                 HorizontalOptions="FillAndExpand"
-                                VerticalOptions="FillAndExpand"
-                                Clicked="OnBotoClickeado"/>
+                                VerticalOptions="FillAndExpand"/>
                             <StackLayout Margin="30" VerticalOptions="EndAndExpand">
                                 <Label Text="{Binding Title}" TextColor="White" FontSize="35" FontFamily="{StaticResource PlayfairBold}"/>
                                 <Label Text="{Binding Caption}" TextColor="White" FontSize="15" FontFamily="{StaticResource LightFont}"/>

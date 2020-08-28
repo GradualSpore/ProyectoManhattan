@@ -34,10 +34,8 @@ namespace FashionApp.Views
                     }
                     (Application.Current).MainPage = new AppShell();
                 }
-                else
-                {
-                    lblAdvertencia.Text = "Usuario o contraseña incorrectos";
-                }
+                
+                
             };
             btnCrearCuenta.Clicked += async(sender, e) =>
             {
