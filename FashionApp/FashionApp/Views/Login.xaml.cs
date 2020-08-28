@@ -17,12 +17,11 @@ namespace FashionApp.Views
         {
             InitializeComponent();
 
-            btnIniciarSesion.Clicked += (sender, e) =>
+            btnIniciarSesion.Clicked += async (sender, e) =>
             {
                 Connect login = new Connect(etyCorreo.Text, etyContra.Text);
                 string error;
-                //login.Login(out error)
-                if ("root" == etyCorreo.Text && "12345" == etyContra.Text)
+                if (login.Login(out error))
                 {
                     if (stchRemember.IsToggled == true)
                     {
@@ -34,7 +33,7 @@ namespace FashionApp.Views
                 }
                 else
                 {
-                    //await DisplayAlert("Alerta", "Correo o contraseña incorrectos", "OK");
+                    await DisplayAlert("Alerta", "Correo o contraseña incorrectos", "OK");
                 }
             };
 

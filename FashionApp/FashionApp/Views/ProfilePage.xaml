@@ -46,10 +46,6 @@
                             <Image Source="Binoculars.png" WidthRequest="45" HeightRequest="45" HorizontalOptions="Center"/>
                             <Label Text="Sightseeing" TextColor="#2C3E50" FontSize="12" HorizontalOptions="Center"/>
                         </StackLayout>
-                        <Button Text="Log out"
-                            VerticalOptions="CenterAndExpand"
-                            HorizontalOptions="CenterAndExpand"
-                            x:Name="btnLogOut"/>
                     </Grid>
                 </Grid>
             </Frame>
@@ -63,6 +59,10 @@
                     <Label Grid.Row="1" Text="I am a dedicated person with a family of four. I enjoy reading, and the knowledge and perspective that my reading gives me has strengthened my teaching skills and presentation abilities. I have been successful at raising a family, and I attribute this success to my ability to plan, schedule, and handle many different tasks at once. This flexibility will help me in the classroom, where there are many different personalities and learning styles." FontSize="14" TextColor="#707070"/>
                 </Grid>
             </Frame>
+            <Button Text="Log out"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="CenterAndExpand"
+                x:Name="btnLogOut"/>
         </Grid>
     </ScrollView>
 </ContentPage>

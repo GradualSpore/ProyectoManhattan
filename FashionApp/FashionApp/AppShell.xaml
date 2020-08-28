@@ -36,11 +36,14 @@
         <Tab Title="Restaurantes" Icon="collections.png">
             <ShellContent ContentTemplate="{DataTemplate views:CollectionsPage}"/>
         </Tab>
-        <Tab Title="Carro" Icon="shop.png">
-            <ShellContent ContentTemplate="{DataTemplate views:Carrito}"/>
+        <Tab Title="Menu" Icon="shop.png">
+            <ShellContent ContentTemplate="{DataTemplate views:Menu}"/>
         </Tab>
         <Tab Title="Perfil" Icon="user.png">
             <ShellContent ContentTemplate="{DataTemplate views:ProfilePage}"/>
+        </Tab>
+        <Tab Title="Carrito" Icon="user.png">
+            <ShellContent ContentTemplate="{DataTemplate views:Carrito}"/>
         </Tab>
     </TabBar>
 </Shell>
