@@ -19,7 +19,7 @@ namespace FashionApp
 
         MySqlConnectionStringBuilder builder = new MySqlConnectionStringBuilder();
 
-        public bool TryConnection(out string Error)
+        public bool Login(out string Error)
         {
             builder.Server = "201.146.25.42";
             builder.Port = 3306;
@@ -27,12 +27,18 @@ namespace FashionApp
             builder.UserID = "Prueba";
             builder.Password = "GcMSieJWeC8fZJmQ";
 
+            MySqlConnection ms = new MySqlConnection(builder.ToString());
+            string query = "SELECT * FROM tbl_users WHERE correo='" + correo + "' AND password='" + pass + "'";
+            MySqlCommand comando = new MySqlCommand(query, ms);
+            MySqlDataReader lector;
+
             try
             {
-                MySqlConnection ms = new MySqlConnection(builder.ToString());
                 ms.Open();
+                lector = comando.ExecuteReader();
                 Error = "";
-                return true;
+                if (lector.HasRows){return true;}
+                else{return false;}
             }
             catch (Exception ex)
             {
@@ -40,12 +46,5 @@ namespace FashionApp
                 return false;
             }
         }
-
-        public bool Login()
-        {
-            return false;
-        }
-
-
     }
 }

@@ -12,7 +12,7 @@
                 <BindableLayout.ItemTemplate>
                     <DataTemplate>
                         <Grid HorizontalOptions="FillAndExpand" VerticalOptions="Start" HeightRequest="270">
-                            <ImageButton
+                            <Image
                                 Source="{Binding Image}"
                                 Aspect="Fill"
                                 HorizontalOptions="FillAndExpand"
