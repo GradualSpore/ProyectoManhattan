@@ -12,19 +12,9 @@
   <ItemGroup>
     <PackageReference Include="CarouselView.FormsPlugin" Version="5.2.0" />
     <PackageReference Include="MySqlConnector" Version="1.0.1" />
-    <PackageReference Include="Rg.Plugins.Popup" Version="1.0.4" />
     <PackageReference Include="Xamarin.Forms" Version="4.6.0.1141" />
     <PackageReference Include="Xamarin.Essentials" Version="1.2.0" />
     <PackageReference Include="Xamarin.Forms.PancakeView" Version="1.3.7" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="Views\Carrito.xaml.cs">
-      <DependentUpon>Carrito.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\Registro.xaml.cs">
-      <DependentUpon>Registro.xaml</DependentUpon>
-    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -52,11 +42,5 @@
     <EmbeddedResource Update="Views\ShopPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-<<<<<<< Updated upstream
-=======
-    <EmbeddedResource Update="Views\ViewGenerica.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
->>>>>>> Stashed changes
   </ItemGroup>
 </Project>

@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Rg.Plugins.Popup.Services;
 
 namespace FashionApp.Views
 {
@@ -20,7 +19,7 @@ namespace FashionApp.Views
 
         private async void OnBotonClicked(object sender, EventArgs e)
         {
-            await PopupNavigation.PushAsync(new ViewGenerica());
+            
         }
 
         public List<Category> AllCategories { get => GetCategories(); }

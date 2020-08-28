@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
-using Rg.Plugins.Popup.Services;
 
 namespace FashionApp.Views
 {
@@ -32,15 +31,10 @@ namespace FashionApp.Views
                     }
                     (Application.Current).MainPage = new AppShell();
                 }
-<<<<<<< Updated upstream
-                
-                
-=======
                 else
                 {
-                    await PopupNavigation.PushAsync(new ViewGenerica());
+                    await DisplayAlert("Alerta", "Correo o contraseña incorrectos", "OK");
                 }
->>>>>>> Stashed changes
             };
 
             btnCrearCuenta.Clicked += async (sender, e) =>
