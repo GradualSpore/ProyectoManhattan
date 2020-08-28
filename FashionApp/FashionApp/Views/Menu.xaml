@@ -22,9 +22,7 @@
                                         <RowDefinition Height="Auto"/>
                                         <RowDefinition Height="*"/>
                                     </Grid.RowDefinitions>
-                                    <Grid.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="PropertySelected"/>
-                                    </Grid.GestureRecognizers>
+                                    
                                     <Image HeightRequest="115" Aspect="AspectFill" Source="{Binding Image}" />
                                     <Image Source="bookmark.png" HorizontalOptions="End" Margin="12" HeightRequest="16" VerticalOptions="Start"/>
                                     <Grid VerticalOptions="End" Margin="15">
