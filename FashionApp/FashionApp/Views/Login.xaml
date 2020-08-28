@@ -3,50 +3,44 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FashionApp.Views.Login" BackgroundColor="#FFFFFF">
     <ContentPage.Content>
-        <Grid BackgroundColor="White">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="50"/>
-            </Grid.RowDefinitions>
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,10,0,0" Grid.Row="0">
-                <Label Text="Smart Delivery"/>
-                <Image Source="mediaw.png" Opacity="0.6" VerticalOptions="Start" Margin="0,3,0,0"/>
+        <StackLayout>
+            <Label Text="SMART DELIVERY"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Iniciar Sesion"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Entry Placeholder="Correo electronico"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                x:Name="etyCorreo"/>
+            <Entry Placeholder="Contraseña"
+                IsPassword="True"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                x:Name="etyContra"/>
+            <StackLayout
+                Orientation="Horizontal"
+                Padding="0,20,0,40"
+                HorizontalOptions="Center">
+                <Label Text="Recordar credenciales" />
+                <Switch x:Name="stchRemember" ThumbColor="HotPink" OnColor="Pink"/>
             </StackLayout>
-            <Grid RowSpacing="20" Grid.Row="1" Margin="20,0,20,0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="37"/>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="40"/>
-                    <RowDefinition Height="30"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                
-                <Entry Grid.Row="1" Placeholder="Correo electronico" PlaceholderColor="#bababa" FontSize="16"
-		        x:Name="etyCorreo"/>
-                <Entry Grid.Row="2" Placeholder="Contraseña" PlaceholderColor="#bababa" FontSize="16"
-		        x:Name="etyContra"/>
-
-                <Button Text="Iniciar Sesión" BackgroundColor="#62153B" TextColor="White" HeightRequest="50" VerticalOptions="Start" Grid.Row="3"
-		        x:Name="btnIniciarSesion"/>
-
-            </Grid>
-            <StackLayout Grid.Row="4" Orientation="Horizontal" HorizontalOptions="Center">
-                <Label Text="Recordar credenciales" VerticalOptions="Center"/>
-                <Switch VerticalOptions="Center" x:Name="stchRemember" ThumbColor="HotPink" OnColor="Pink"/>
-            </StackLayout>
-
-
-            <StackLayout Grid.Row="5" Margin="0,20,0,0" BackgroundColor="#ffffff">
-                
-
-                <Label Text="No tienes cuenta?" HorizontalOptions="Center" />
-                <Button Text="Registrate"  HeightRequest="50"  Grid.Row="3"
-                         HorizontalOptions="FillAndExpand"
-                        x:Name="btnCrearCuenta"/>
-            </StackLayout>
-        </Grid>
+            <Button Text="Iniciar sesion"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                x:Name="btnIniciarSesion"/>
+            <Label Text="¿No tiene cuenta aun?"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Button Text="Crear cuenta"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                x:Name="btnCrearCuenta"/>
+            <Label Text=""
+                VerticalOptions="End"
+                HorizontalOptions="Center"
+                x:Name="lblAdvertencia"/>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
