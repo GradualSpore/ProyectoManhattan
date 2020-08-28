@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
+using Rg.Plugins.Popup.Services;
 
 namespace FashionApp.Views
 {
@@ -17,14 +18,11 @@ namespace FashionApp.Views
         {
             InitializeComponent();
 
-            btnIniciarSesion.Clicked += (sender, e) =>
+            btnIniciarSesion.Clicked += async (sender, e) =>
             {
                 Connect login = new Connect(etyCorreo.Text, etyContra.Text);
                 string error;
-                if(!login.TryConnection(out error)){
-
-                }
-                if ("root"==etyCorreo.Text && "12345"==etyContra.Text)
+                if (login.Login(out error))
                 {
                     if (stchRemember.IsToggled == true)
                     {
@@ -34,14 +32,24 @@ namespace FashionApp.Views
                     }
                     (Application.Current).MainPage = new AppShell();
                 }
+<<<<<<< Updated upstream
                 
                 
+=======
+                else
+                {
+                    await PopupNavigation.PushAsync(new ViewGenerica());
+                }
+>>>>>>> Stashed changes
             };
-            btnCrearCuenta.Clicked += async(sender, e) =>
+
+            btnCrearCuenta.Clicked += async (sender, e) =>
             {
                 await Navigation.PushAsync(new Registro());
             };
         }
+
+
         protected override void OnAppearing()
         {
             if ((Preferences.ContainsKey("Login", "true") == true))
